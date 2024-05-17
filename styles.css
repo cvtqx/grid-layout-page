@@ -1,0 +1,148 @@
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  --clr-very-dark-blue: hsl(234, 12%, 34%);
+  --clr-grayish-blue: hsl(229, 6%, 66%);
+  --clr-very-light-gray: hsl(0, 0%, 98%);
+
+  --fs-primary: 15px;
+
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  color: var(--clr-grayish-blue);
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-200);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-very-light-gray);
+}
+
+h1 {
+  font-weight: var(--fw-200);
+}
+
+h1 strong,
+h2 {
+  font-weight: var(--fw-600);
+  color: var(--clr-very-dark-blue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;;
+  width: 330px;
+}
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.intro strong{
+    display: block;
+}
+
+.card {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 1px 3px 10px var(--clr-grayish-blue);
+  width: 100%;
+  height: 243px;
+  text-align: left;
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.card img {
+  padding-left: 14rem;
+  padding-top: 1rem;
+}
+
+#card-cyan {
+  border-block-start: 6px solid var(--clr-cyan);
+}
+
+#card-red {
+  border-block-start: 6px solid var(--clr-red);
+}
+
+#card-orange {
+  border-block-start: 6px solid var(--clr-orange);
+}
+
+#card-blue {
+  border-block-start: 6px solid var(--clr-blue);
+}
+
+      .attribution {
+        margin-top: 5rem;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+@media screen and (min-width: 850px) {
+    .container{
+        margin-top: 5rem;
+    }
+    .intro{
+        width: 25vw;
+        align-self: center;
+    }
+  .cards-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+
+  .item1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin-top: 153px;
+  }
+
+  .item2 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .item3 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .item4 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    margin-top: 153px;
+  }
+}
