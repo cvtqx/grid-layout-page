@@ -54,7 +54,7 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;;
+  justify-content: center;
   width: 330px;
 }
 
@@ -62,15 +62,22 @@ h2 {
   margin-bottom: 3rem;
 }
 
-.intro strong{
-    display: block;
+.intro strong {
+  display: block;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
   background-color: white;
   border-radius: 6px;
   box-shadow: 1px 3px 10px var(--clr-grayish-blue);
-  width: 100%;
+  width: 319px;
   height: 243px;
   text-align: left;
   padding: 1.5rem 1.5rem;
@@ -99,34 +106,38 @@ h2 {
   border-block-start: 6px solid var(--clr-blue);
 }
 
-      .attribution {
-        margin-top: 5rem;
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+.attribution {
+  margin-top: 5rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-@media screen and (min-width: 850px) {
-    .container{
-        margin-top: 5rem;
-    }
-    .intro{
-        width: 25vw;
-        align-self: center;
-    }
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-top: 5rem;
+    width: 100vw;
+  }
+  
+  .intro{
+    width: 50%;
+    max-width: 510px;
+    align-self: center;
+  }
+
   .cards-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 1rem;
+    margin: auto 2rem;
   }
 
   .item1 {
     grid-column: 1;
     grid-row: 1 / span 2;
-    margin-top: 153px;
   }
 
   .item2 {
@@ -143,6 +154,5 @@ h2 {
   .item4 {
     grid-column: 3;
     grid-row: 1 / span 2;
-    margin-top: 153px;
   }
 }
